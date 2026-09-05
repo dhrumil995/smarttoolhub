@@ -1,0 +1,8 @@
+# robots.txt for SmartToolHub
+# Highly optimized for clean indexation and AI/LLM crawler compliance
+
+User-agent: *
+Allow: /
+
+# Specifically link the XML Sitemap for indexation
+Sitemap: https://smarttoolhub.net/sitemap.xml

@@ -1,0 +1,58 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Force HTTPS protocol (Recommended for Hostinger SSL & Cloudflare)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Direct existing physical files or directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route all clean Single-Page Application (SPA) URLs to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Security Response Headers
+<IfModule mod_headers.c>
+  # Protect against clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # Prevent MIME-type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # Secure Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Force HTTPS via HSTS (1 year + subdomains)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  
+  # Protect against XSS
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Content Security Policy for modern SPAs & APIs & AdSense
+  Header always set Content-Security-Policy "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https: data: blob:; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:;"
+</IfModule>
+
+# Enable GZIP Compression for Fast Loading on Hostinger
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Browser Caching Headers for Static Assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/x-javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+

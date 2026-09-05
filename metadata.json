@@ -1,0 +1,6 @@
+{
+  "name": "SmartToolHub",
+  "description": "Premium free, privacy-first developer utility and productivity portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

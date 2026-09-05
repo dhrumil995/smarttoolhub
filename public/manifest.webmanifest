@@ -1,0 +1,27 @@
+{
+  "short_name": "SmartToolHub",
+  "name": "SmartToolHub - Free Developer & Productivity Tools",
+  "description": "Premium collection of free, secure, and offline-ready utilities processing 100% client-side.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/favicon.jpeg",
+      "type": "image/jpeg",
+      "sizes": "1600x1600"
+    }
+  ],
+  "start_url": "/#/",
+  "background_color": "#030712",
+  "theme_color": "#1e40af",
+  "display": "standalone",
+  "orientation": "portrait"
+}

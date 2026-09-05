@@ -1,0 +1,41 @@
+[
+  {
+    "userId": "aslaliyadhrumil40@gmail.com",
+    "userName": "Aslaliya Dhrumil",
+    "userPhone": "+919106480467",
+    "planId": "starter",
+    "planName": "Starter Plan",
+    "startDate": "2026-08-07T04:21:05.430Z",
+    "expiryDate": "2026-08-07T04:21:05.430Z",
+    "status": "Pending",
+    "amountPaid": 299,
+    "lastOrderId": "STH-ORD-621798",
+    "updatedAt": "2026-08-07T04:21:05.430Z"
+  },
+  {
+    "userId": "test@example.com",
+    "userName": "Test",
+    "userPhone": "+919999999999",
+    "planId": "starter",
+    "planName": "Starter",
+    "startDate": "2026-08-07T04:47:17.811Z",
+    "expiryDate": "2026-08-07T04:47:17.811Z",
+    "status": "Pending",
+    "amountPaid": 299,
+    "lastOrderId": "STH-ORD-317021",
+    "updatedAt": "2026-08-07T04:47:17.811Z"
+  },
+  {
+    "userId": "admincheck@example.com",
+    "userName": "Admin Check",
+    "userPhone": "+919876543210",
+    "planId": "pro",
+    "planName": "Pro Plan",
+    "startDate": "2026-08-07T05:03:01.885Z",
+    "expiryDate": "2026-08-07T05:03:01.885Z",
+    "status": "Pending",
+    "amountPaid": 699,
+    "lastOrderId": "STH-ORD-969814",
+    "updatedAt": "2026-08-07T05:03:01.885Z"
+  }
+]
